@@ -13,6 +13,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //使用百度地图， 先启用  BaiduMapManger
+    _mapManager =  [[BMKMapManager alloc] init];
+    BOOL ret = [_mapManager start:@"98C3610F67E79CE59DCA0E50EB63A43B4A3FF5BE" generalDelegate:nil];
+    if (!ret) {
+        ICODPRINT(@"百度地图 mapmanger 启动失败");
+    }
     return YES;
 }
 							

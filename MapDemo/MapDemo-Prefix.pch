@@ -12,3 +12,15 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+
+
+// The general purpose logger. This ignores logging levels.
+#ifdef DEBUG
+#define ICODPRINT(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define ICODPRINT(xx, ...)  ((void)0)
+#endif // #ifdef DEBUG
+
+// Prints the current method's name.
+#define ICODPRINTMETHODNAME() ICODPRINT(@"%s", __PRETTY_FUNCTION__)
