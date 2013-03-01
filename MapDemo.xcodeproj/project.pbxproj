@@ -17,12 +17,15 @@
 		144DFA0416E04A0F00F5A495 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 144DFA0316E04A0F00F5A495 /* Default@2x.png */; };
 		144DFA0616E04A0F00F5A495 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 144DFA0516E04A0F00F5A495 /* Default-568h@2x.png */; };
 		144DFA0916E04A0F00F5A495 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 144DFA0716E04A0F00F5A495 /* MainStoryboard.storyboard */; };
-		144DFA0C16E04A0F00F5A495 /* ICOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144DFA0B16E04A0F00F5A495 /* ICOViewController.m */; };
+		144DFA0C16E04A0F00F5A495 /* ICOMapViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 144DFA0B16E04A0F00F5A495 /* ICOMapViewController.mm */; };
 		144DFA1416E04A1000F5A495 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144DFA1316E04A0F00F5A495 /* SenTestingKit.framework */; };
 		144DFA1516E04A1000F5A495 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144DF9EF16E04A0F00F5A495 /* UIKit.framework */; };
 		144DFA1616E04A1000F5A495 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144DF9F116E04A0F00F5A495 /* Foundation.framework */; };
 		144DFA1E16E04A1000F5A495 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 144DFA1C16E04A1000F5A495 /* InfoPlist.strings */; };
 		144DFA2116E04A1000F5A495 /* MapDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 144DFA2016E04A1000F5A495 /* MapDemoTests.m */; };
+		144DFA4A16E04C5700F5A495 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144DFA4916E04C5700F5A495 /* CoreLocation.framework */; };
+		144DFA4C16E04C5E00F5A495 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144DFA4B16E04C5E00F5A495 /* QuartzCore.framework */; };
+		144DFA4E16E04DC100F5A495 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 144DFA4D16E04DC100F5A495 /* mapapi.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +53,46 @@
 		144DFA0316E04A0F00F5A495 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		144DFA0516E04A0F00F5A495 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		144DFA0816E04A0F00F5A495 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		144DFA0A16E04A0F00F5A495 /* ICOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICOViewController.h; sourceTree = "<group>"; };
-		144DFA0B16E04A0F00F5A495 /* ICOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICOViewController.m; sourceTree = "<group>"; };
+		144DFA0A16E04A0F00F5A495 /* ICOMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICOMapViewController.h; sourceTree = "<group>"; };
+		144DFA0B16E04A0F00F5A495 /* ICOMapViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ICOMapViewController.mm; sourceTree = "<group>"; };
 		144DFA1216E04A0F00F5A495 /* MapDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		144DFA1316E04A0F00F5A495 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		144DFA1B16E04A1000F5A495 /* MapDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapDemoTests-Info.plist"; sourceTree = "<group>"; };
 		144DFA1D16E04A1000F5A495 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		144DFA1F16E04A1000F5A495 /* MapDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapDemoTests.h; sourceTree = "<group>"; };
 		144DFA2016E04A1000F5A495 /* MapDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapDemoTests.m; sourceTree = "<group>"; };
+		144DFA2C16E04AE300F5A495 /* BMapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMapKit.h; sourceTree = "<group>"; };
+		144DFA2D16E04AE300F5A495 /* BMKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKAnnotation.h; sourceTree = "<group>"; };
+		144DFA2E16E04AE300F5A495 /* BMKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKAnnotationView.h; sourceTree = "<group>"; };
+		144DFA2F16E04AE300F5A495 /* BMKCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKCircle.h; sourceTree = "<group>"; };
+		144DFA3016E04AE300F5A495 /* BMKCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKCircleView.h; sourceTree = "<group>"; };
+		144DFA3116E04AE300F5A495 /* BMKGeneralDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGeneralDelegate.h; sourceTree = "<group>"; };
+		144DFA3216E04AE300F5A495 /* BMKGeocodeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGeocodeType.h; sourceTree = "<group>"; };
+		144DFA3316E04AE300F5A495 /* BMKGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKGeometry.h; sourceTree = "<group>"; };
+		144DFA3416E04AE300F5A495 /* BMKMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKMapManager.h; sourceTree = "<group>"; };
+		144DFA3516E04AE300F5A495 /* BMKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKMapView.h; sourceTree = "<group>"; };
+		144DFA3616E04AE300F5A495 /* BMKMultiPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKMultiPoint.h; sourceTree = "<group>"; };
+		144DFA3716E04AE300F5A495 /* BMKOfflineMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOfflineMap.h; sourceTree = "<group>"; };
+		144DFA3816E04AE300F5A495 /* BMKOfflineMapType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOfflineMapType.h; sourceTree = "<group>"; };
+		144DFA3916E04AE300F5A495 /* BMKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOverlay.h; sourceTree = "<group>"; };
+		144DFA3A16E04AE300F5A495 /* BMKOverlayPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOverlayPathView.h; sourceTree = "<group>"; };
+		144DFA3B16E04AE300F5A495 /* BMKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKOverlayView.h; sourceTree = "<group>"; };
+		144DFA3C16E04AE300F5A495 /* BMKPinAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPinAnnotationView.h; sourceTree = "<group>"; };
+		144DFA3D16E04AE300F5A495 /* BMKPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPointAnnotation.h; sourceTree = "<group>"; };
+		144DFA3E16E04AE300F5A495 /* BMKPoiSearchType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPoiSearchType.h; sourceTree = "<group>"; };
+		144DFA3F16E04AE300F5A495 /* BMKPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPolygon.h; sourceTree = "<group>"; };
+		144DFA4016E04AE300F5A495 /* BMKPolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPolygonView.h; sourceTree = "<group>"; };
+		144DFA4116E04AE300F5A495 /* BMKPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPolyline.h; sourceTree = "<group>"; };
+		144DFA4216E04AE300F5A495 /* BMKPolylineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKPolylineView.h; sourceTree = "<group>"; };
+		144DFA4316E04AE300F5A495 /* BMKRouteSearchType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKRouteSearchType.h; sourceTree = "<group>"; };
+		144DFA4416E04AE300F5A495 /* BMKSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKSearch.h; sourceTree = "<group>"; };
+		144DFA4516E04AE300F5A495 /* BMKShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKShape.h; sourceTree = "<group>"; };
+		144DFA4616E04AE300F5A495 /* BMKTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKTypes.h; sourceTree = "<group>"; };
+		144DFA4716E04AE300F5A495 /* BMKUserLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKUserLocation.h; sourceTree = "<group>"; };
+		144DFA4816E04AE300F5A495 /* BMKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMKVersion.h; sourceTree = "<group>"; };
+		144DFA4916E04C5700F5A495 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		144DFA4B16E04C5E00F5A495 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		144DFA4D16E04DC100F5A495 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = ThirdParties/BaiduMapApi_Lib_iOS_1.2.2/mapapi.bundle; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144DFA4C16E04C5E00F5A495 /* QuartzCore.framework in Frameworks */,
+				144DFA4A16E04C5700F5A495 /* CoreLocation.framework in Frameworks */,
 				144DF9F016E04A0F00F5A495 /* UIKit.framework in Frameworks */,
 				144DF9F216E04A0F00F5A495 /* Foundation.framework in Frameworks */,
 				144DF9F416E04A0F00F5A495 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +143,8 @@
 		144DF9EE16E04A0F00F5A495 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				144DFA4B16E04C5E00F5A495 /* QuartzCore.framework */,
+				144DFA4916E04C5700F5A495 /* CoreLocation.framework */,
 				144DF9EF16E04A0F00F5A495 /* UIKit.framework */,
 				144DF9F116E04A0F00F5A495 /* Foundation.framework */,
 				144DF9F316E04A0F00F5A495 /* CoreGraphics.framework */,
@@ -117,11 +156,12 @@
 		144DF9F516E04A0F00F5A495 /* MapDemo */ = {
 			isa = PBXGroup;
 			children = (
+				144DFA2A16E04ACA00F5A495 /* ThirdParties */,
 				144DF9FE16E04A0F00F5A495 /* ICOAppDelegate.h */,
 				144DF9FF16E04A0F00F5A495 /* ICOAppDelegate.m */,
 				144DFA0716E04A0F00F5A495 /* MainStoryboard.storyboard */,
-				144DFA0A16E04A0F00F5A495 /* ICOViewController.h */,
-				144DFA0B16E04A0F00F5A495 /* ICOViewController.m */,
+				144DFA0A16E04A0F00F5A495 /* ICOMapViewController.h */,
+				144DFA0B16E04A0F00F5A495 /* ICOMapViewController.mm */,
 				144DF9F616E04A0F00F5A495 /* Supporting Files */,
 			);
 			path = MapDemo;
@@ -158,6 +198,60 @@
 				144DFA1C16E04A1000F5A495 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		144DFA2A16E04ACA00F5A495 /* ThirdParties */ = {
+			isa = PBXGroup;
+			children = (
+				144DFA4F16E04DC700F5A495 /* BaiduMap */,
+			);
+			name = ThirdParties;
+			sourceTree = "<group>";
+		};
+		144DFA2B16E04AE300F5A495 /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				144DFA2C16E04AE300F5A495 /* BMapKit.h */,
+				144DFA2D16E04AE300F5A495 /* BMKAnnotation.h */,
+				144DFA2E16E04AE300F5A495 /* BMKAnnotationView.h */,
+				144DFA2F16E04AE300F5A495 /* BMKCircle.h */,
+				144DFA3016E04AE300F5A495 /* BMKCircleView.h */,
+				144DFA3116E04AE300F5A495 /* BMKGeneralDelegate.h */,
+				144DFA3216E04AE300F5A495 /* BMKGeocodeType.h */,
+				144DFA3316E04AE300F5A495 /* BMKGeometry.h */,
+				144DFA3416E04AE300F5A495 /* BMKMapManager.h */,
+				144DFA3516E04AE300F5A495 /* BMKMapView.h */,
+				144DFA3616E04AE300F5A495 /* BMKMultiPoint.h */,
+				144DFA3716E04AE300F5A495 /* BMKOfflineMap.h */,
+				144DFA3816E04AE300F5A495 /* BMKOfflineMapType.h */,
+				144DFA3916E04AE300F5A495 /* BMKOverlay.h */,
+				144DFA3A16E04AE300F5A495 /* BMKOverlayPathView.h */,
+				144DFA3B16E04AE300F5A495 /* BMKOverlayView.h */,
+				144DFA3C16E04AE300F5A495 /* BMKPinAnnotationView.h */,
+				144DFA3D16E04AE300F5A495 /* BMKPointAnnotation.h */,
+				144DFA3E16E04AE300F5A495 /* BMKPoiSearchType.h */,
+				144DFA3F16E04AE300F5A495 /* BMKPolygon.h */,
+				144DFA4016E04AE300F5A495 /* BMKPolygonView.h */,
+				144DFA4116E04AE300F5A495 /* BMKPolyline.h */,
+				144DFA4216E04AE300F5A495 /* BMKPolylineView.h */,
+				144DFA4316E04AE300F5A495 /* BMKRouteSearchType.h */,
+				144DFA4416E04AE300F5A495 /* BMKSearch.h */,
+				144DFA4516E04AE300F5A495 /* BMKShape.h */,
+				144DFA4616E04AE300F5A495 /* BMKTypes.h */,
+				144DFA4716E04AE300F5A495 /* BMKUserLocation.h */,
+				144DFA4816E04AE300F5A495 /* BMKVersion.h */,
+			);
+			name = inc;
+			path = ThirdParties/BaiduMapApi_Lib_iOS_1.2.2/inc;
+			sourceTree = SOURCE_ROOT;
+		};
+		144DFA4F16E04DC700F5A495 /* BaiduMap */ = {
+			isa = PBXGroup;
+			children = (
+				144DFA4D16E04DC100F5A495 /* mapapi.bundle */,
+				144DFA2B16E04AE300F5A495 /* inc */,
+			);
+			name = BaiduMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +331,7 @@
 				144DFA0416E04A0F00F5A495 /* Default@2x.png in Resources */,
 				144DFA0616E04A0F00F5A495 /* Default-568h@2x.png in Resources */,
 				144DFA0916E04A0F00F5A495 /* MainStoryboard.storyboard in Resources */,
+				144DFA4E16E04DC100F5A495 /* mapapi.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +368,7 @@
 			files = (
 				144DF9FC16E04A0F00F5A495 /* main.m in Sources */,
 				144DFA0016E04A0F00F5A495 /* ICOAppDelegate.m in Sources */,
-				144DFA0C16E04A0F00F5A495 /* ICOViewController.m in Sources */,
+				144DFA0C16E04A0F00F5A495 /* ICOMapViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +440,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -365,7 +460,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -375,9 +470,16 @@
 		144DFA2516E04A1000F5A495 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapDemo/MapDemo-Prefix.pch";
 				INFOPLIST_FILE = "MapDemo/MapDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/ThirdParties/BaiduMapApi_Lib_iOS_1.2.2/libs/Release$(EFFECTIVE_PLATFORM_NAME)";
+				OTHER_LDFLAGS = (
+					"-lbaidumapapi",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,9 +488,16 @@
 		144DFA2616E04A1000F5A495 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapDemo/MapDemo-Prefix.pch";
 				INFOPLIST_FILE = "MapDemo/MapDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/ThirdParties/BaiduMapApi_Lib_iOS_1.2.2/libs/Release$(EFFECTIVE_PLATFORM_NAME)";
+				OTHER_LDFLAGS = (
+					"-lbaidumapapi",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
